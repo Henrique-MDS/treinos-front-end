@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Loopstudios landing page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+
+    <div class="navigation">
+      <div class="logo">
+        <img src="images/logo.svg">
+      </div>
+      <nav>
+        <div class="nav-links">
+          <a href="#">About</a>
+          <a href="#">Careers</a>
+          <a href="#">Events</a>
+          <a href="#">Products</a>
+          <a href="#">Support</a>
+        </div>
+      </nav>
+      <img src="images/icon-hamburger.svg" id="menu-icon">
+
+      <div class="mobile-menu hide">
+        <div class="close-menu">
+          <img src="images/logo.svg">
+          <img src="images/icon-close.svg" id="menu-icon-close">
+        </div>
+        <div class="mobile-links">
+          <a href="#">About</a>
+          <a href="#">Careers</a>
+          <a href="#">Events</a>
+          <a href="#">Products</a>
+          <a href="#">Support</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero">
+      <h1>Immersive experiences that deliver</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="first-content">
+      <div class="vr-img">
+        <picture>
+          <source media="(min-width: 690px)" srcset="images/desktop/image-interactive.jpg" type="image/jpg">
+          <img src="images/mobile/image-interactive.jpg">
+        </picture>
+      </div>
+      <div class="interactive-vr">
+        <h2>The leader in interactive VR</h2>
+        <p>
+          Founded in 2011, Loopstudios has been producing world-class virtual reality 
+          projects for some of the best companies around the globe. Our award-winning 
+          creations have transformed businesses through digital experiences that bind 
+          to their brand.
+        </p>
+      </div>
+    </div>
+
+    <div class="our-creations">
+      <div class="flex-content">
+        <h2>Our creations</h2>
+        <button type="button" id="desk-button" class="btn">See all</button>
+      </div>
+
+      <div class="grid-content">
+        <div class="grid-container">
+          <picture>
+            <source media="(min-width: 690px)" srcset="images/desktop/image-deep-earth.jpg" type="image/jpg">
+            <img src="images/mobile/image-deep-earth.jpg">
+          </picture>
+          <p class="destaque">Deep earth</p>
+        </div>
+        <div class="grid-container">
+          <picture>
+            <source media="(min-width: 690px)" srcset="images/desktop/image-night-arcade.jpg" type="image/jpg">
+            <img src="images/mobile/image-night-arcade.jpg">
+          </picture>
+          <p class="destaque">Night arcade</p>
+        </div>
+        <div class="grid-container">
+          <picture>
+            <source media="(min-width: 690px)" srcset="images/desktop/image-soccer-team.jpg" type="image/jpg">
+            <img src="images/mobile/image-soccer-team.jpg">
+          </picture>
+          <p class="destaque">Soccer team VR</p>
+        </div>
+        <div class="grid-container">
+          <picture>
+            <source media="(min-width: 690px)" srcset="images/desktop/image-grid.jpg" type="image/jpg">
+            <img src="images/mobile/image-grid.jpg">
+          </picture>
+          <p class="destaque">The grid</p>
+        </div>
+        <div class="grid-container">
+          <picture>
+            <source media="(min-width: 690px)" srcset="images/desktop/image-from-above.jpg" type="image/jpg">
+            <img src="images/mobile/image-from-above.jpg">
+          </picture>
+          <p class="destaque">From up above VR</p>
+        </div>
+        <div class="grid-container">
+          <picture>
+            <source media="(min-width: 690px)" srcset="images/desktop/image-pocket-borealis.jpg" type="image/jpg">
+            <img src="images/mobile/image-pocket-borealis.jpg">
+          </picture>
+          <p class="destaque">Pocket borealis</p>
+        </div>
+        <div class="grid-container">
+          <picture>
+            <source media="(min-width: 690px)" srcset="images/desktop/image-curiosity.jpg" type="image/jpg">
+            <img src="images/mobile/image-curiosity.jpg">
+          </picture>
+          <p class="destaque">The curiosity</p>
+        </div>
+        <div class="grid-container">
+          <picture>
+            <source media="(min-width: 690px)" srcset="images/desktop/image-fisheye.jpg" type="image/jpg">
+            <img src="images/mobile/image-fisheye.jpg">
+          </picture>
+          <p class="destaque">Make it fisheye</p>
+        </div>
+
+        <button type="button" id="mobile-button" class="btn">See all</button>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="loopstudios">
+      <div class="logo-icon">
+        <div class="logo-footer">
+          <img src="images/logo.svg">
+        </div>
+        <div class="icons">
+          <img src="images/icon-facebook.svg">
+          <img src="images/icon-twitter.svg">
+          <img src="images/icon-pinterest.svg">
+          <img src="images/icon-instagram.svg">
+        </div>
+      </div>
+
+      <div class="about-copy">
+        <div class="about">
+          <div class="info">
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Events</a>
+            <a href="#">Products</a>
+            <a href="#">Support</a>
+          </div>
+        </div>
+        <div class="copy">
+          <p>© 2021 Loopstudios. All rights reserved.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </footer>
+  
+  <script src="index.js"></script>
+</body>
+</html>
