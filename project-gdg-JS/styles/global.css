@@ -1,0 +1,173 @@
+/* -----------PRE CONFIG----------- */
+
+@import url(../styles/colors.css);
+@import url(../styles/navigation.css);
+
+@font-face {
+  font-family: 'StarGuard Italic';
+  src: url('../assets/star-guard-italic.ttf');
+  font-weight: normal;
+  font-display: swap;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  --text: #EDF1F7;
+
+  --image-shadow: radial-gradient(100% 100% at 50% 1.43%, rgba(22, 21, 21, 0), rgba(22, 21, 21, 0.9) 80%);
+  --peter: linear-gradient(45deg, #e11010 25%, #ffa200 80%);
+  --gamora: linear-gradient(45deg, #6FE863 30%, #FF008D 85%);
+  --drax: linear-gradient(45deg, #fe0000 10%, #b495a4 70%);
+  --groot: linear-gradient(45deg, #1AEC38, #ff7c00 90%);
+  --mantis: linear-gradient(45deg, #fee800, #eb9125);
+  --rocket: linear-gradient(45deg, #B55D00 22%, #ffffff);
+}
+
+body {
+  color: var(--text);
+  font-family: 'Rubik', sans-serif;
+  overflow: hidden;
+}
+
+/* ---------BACKGROUND/IMAGES------------ */
+
+.background {
+  position: relative;
+  z-index: -1;
+}
+
+.background::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100vh;
+  background: var(--image-shadow);
+  z-index: 1;
+}
+
+#images {
+  position: absolute;
+  transition: all .5s;
+}
+
+#images img {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-fit: top;
+}
+
+/* ------------MAIN/HEADER------------ */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  padding: 3rem 4rem 4rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 8px;
+
+  z-index: 10;
+
+  border: 0;
+  background: transparent;
+}
+
+#menu:hover {
+  cursor: pointer;
+}
+
+#menu span {
+  height: 2px;
+  background: var(--text);
+  border-radius: 8px;
+  transition: all .4s;
+}
+
+#menu span:nth-child(1) {
+  width: 32px;
+}
+
+#menu span:nth-child(2) {
+  width: 40px;
+}
+
+#menu span:nth-child(3) {
+  width: 24px;
+}
+
+#menu.active span:nth-child(2) {
+  opacity: 0;
+  width: 0px;
+}
+
+#menu.active span:nth-child(1) {
+  width: 32px;
+  transform: rotate(-45deg) translate(-7px, 5px);
+}
+
+#menu.active span:nth-child(3) {
+  width: 32px;
+  transform: rotate(45deg) translate(-8px, -7px);
+}
+
+main {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 12px;
+}
+
+main div {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+
+main div button {
+  width: 40px;
+  height: 40px;
+
+  background: transparent;
+  border-radius: 100%;
+  border: 1px solid var(--text);
+  cursor: pointer;
+}
+
+main div button svg path {
+  fill: var(--text);
+}
+
+#memberName {
+  font-size: 130px;
+  letter-spacing: 6px;
+  font-weight: 400;
+
+  color: transparent;
+  font-family: 'StarGuard Italic';
+  background: var(--peter);
+  -webkit-background-clip: text;
+}
