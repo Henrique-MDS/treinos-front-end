@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --color-bright-blue: hsl(220, 98%, 61%);
+    --color-theme-1: white;
+    --color-theme-2: black;
+    --image: url(images/bg-desktop-light.jpg);
+    --icon: url(images/icon-moon.svg);
+
+    --mobile-img: url(images/bg-mobile-light.jpg);
+
+
+    --linear-gradient:hsl(192, 100%, 67%), hsl(280, 87%, 65%);
+
+    --fs-padrao: 18px;
+
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+    --font-Josefin: "Josefin Sans", sans-serif;
+}
+
+.dark-theme {
+    --color-theme-1:hsl(235, 24%, 19%);
+    --color-theme-2: white;
+    --image: url(images/bg-desktop-dark.jpg);
+    --icon: url(images/icon-sun.svg);
+}
+
+.hide {
+    display: none;
+}
+
+#myInput {
+    background-color: var(--color-theme-1);
+    color: var(--color-theme-2);
+    transition: all .5s;
+    border: none;
+    height: 35px;
+    border-radius: 10px;
+    width: 90%;
+    font-size: 1.5rem;
+}
+
+#darkThemeIcon{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-image: var(--icon);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: all .5s;
+}
+
+#divList{
+    background-color: var(--color-theme-1);
+    color: var(--color-theme-2);
+    transition: all .5s;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.253);
+}
+
+body {
+    background-image: var(--image);
+    background-repeat: no-repeat;
+    background-position: center top;
+    font-family: var(--font-Josefin);
+    font-size: var(--fs-padrao);
+    background-color: var(--color-theme-1);
+
+    transition: all .5s;
+}
+
+h1{
+    text-transform: uppercase;
+    color: white;
+    font-weight: var(--fw-bold);
+    letter-spacing: 10px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addTask{
+    display: flex;
+    justify-content: space-between;
+}
+
+#central {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#addTaskBtn {
+    background-image: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    color: var(--color-theme-1);
+    padding: 10px;
+    border: 1px solid var(--color-theme-1);
+    border-radius: 10px;
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.content {
+    width: 600px;
+}
+
+
+#myList li{
+    list-style: none;
+    position: relative;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#myList li.checked {
+    text-decoration: line-through;
+    color: rgb(214, 214, 214);
+}
+
+#myList li::before {
+    content: "";
+    position: absolute;
+    border: 1px solid var(--color-theme-2);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    top: -0.2rem;
+    left: -2rem;
+}
+
+#myList li.checked::before{
+    background: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+#myList li:hover::before {
+    border: 1px solid hsl(192, 100%, 67%);
+}
+
+
+#myList li span {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/icon-cross.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    
+    transition: all .5s;
+}
+
+.counters {
+    padding-top: 1rem;
+    display: flex;
+    border-top: 1px solid rgb(167, 167, 167);
+    justify-content: space-between;
+}
+
+.counters a {
+    text-decoration: none;
+    color: grey;
+}
+
+.counters a:hover {
+    color: var(--color-bright-blue);
+}
+
+/*------------MEDIA QUERY------------*/
+
+@media (max-width: 600px) {
+    .addTask{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .addTaskBtn {
+        width: 100%;
+        margin: auto;
+    }
+
+    #myInput{
+        width: 100%;
+        font-size: 1rem;
+    }
+}
